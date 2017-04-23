@@ -4,3 +4,7 @@
  *
  * #note: types declaration
  */
+
+declare module 'tw-crypt' {
+  export const message: (msg: string) => void;
+}
