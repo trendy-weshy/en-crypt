@@ -7,7 +7,7 @@
     "quotemark": [true, "single", "avoid-escape"],
     "no-empty-interface": true,
     "no-import-side-effects": true,
-    "no-namespace": true,
+    "no-namespace": false,
     "no-eval": true,
     "no-var-keyword": true,
     "radix": true,
