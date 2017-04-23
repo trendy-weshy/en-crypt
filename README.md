@@ -1,2 +1,3 @@
-# ts-encrypt-decrypt
-simple code for performing encryption and decryption using node.js and TypeScript
+# tw-crypt
+
+> simple encryption decryption library that uses node.js crypto library.

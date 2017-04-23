@@ -1,0 +1,23 @@
+{
+  "extends": [
+    "tslint-eslint-rules"
+  ],
+  "rules": {
+    "no-constant-condition": true,
+    "quotemark": [true, "single", "avoid-escape"],
+    "no-empty-interface": true,
+    "no-import-side-effects": true,
+    "no-namespace": true,
+    "no-eval": true,
+    "no-var-keyword": true,
+    "radix": true,
+    "triple-equals": true,
+    "class-name": true,
+    "no-angle-bracket-type-assertion": true,
+    "semicolon": [true, "always"],
+    "no-default-export": true,
+    "max-classes-per-file": [1],
+    "switch-default": true,
+    "no-construct": true
+  }
+}

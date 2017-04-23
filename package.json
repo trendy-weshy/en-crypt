@@ -1,6 +1,6 @@
 {
-  "name": "jwCrypt",
-  "version": "1.0.0",
+  "name": "tw-crypt",
+  "version": "0.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -8,8 +8,16 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
-    "@types/node": "^7.0.5"
+    "@types/node": "^7.0.13",
+    "typescript": "^2.2.2"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0",
+    "ts-node": "^3.0.2",
+    "tslint": "^5.1.0",
+    "tslint-eslint-rules": "^4.0.0"
   }
 }
