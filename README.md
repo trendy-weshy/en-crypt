@@ -13,8 +13,8 @@ For those who are interested in contributing to the
 ## Documentation
 The whole library is a static class with two methods `encrypt` and `decrypt`
 
-`static encrypt<T>(data: T, algorithm: string, key: string) => string`
-`static decrypt<T>(data: string/* the encrypted string*/, algorithm: string, key: string) => T`
+- `static encrypt<T>(data: T, algorithm: string, key: string) => string`
+- `static decrypt<T>(data: string/* the encrypted string*/, algorithm: string, key: string) => T`
 
 ** please check the test folder for better example on how to use the library **
 
