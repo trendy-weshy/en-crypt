@@ -1,10 +1,11 @@
 /**
  * created by waweru
  * LICENSE: MIT
- *
- * #note: types declaration
  */
 
 declare module 'tw-crypt' {
-  export const message: (msg: string) => void;
+  export class TwCrypt {
+    public static encrypt<T>(data: T, algorithm: string, key: string): string;
+    public static decrypt<T>(data: string, algorithm: string, key: string): T;   
+  }
 }

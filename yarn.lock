@@ -389,12 +389,6 @@ tsutils@^1.4.0:
   version "1.7.0"
   resolved "https://registry.yarnpkg.com/tsutils/-/tsutils-1.7.0.tgz#2e63ccc2d6912bb095f7e363ff4100721dc86f50"
 
-tw-crypt@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/tw-crypt/-/tw-crypt-0.1.0.tgz#182dedaff5529dfab30f4bab1dbce68144ce370e"
-  dependencies:
-    typescript "^2.2.2"
-
 typescript@^2.2.2:
   version "2.2.2"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.2.2.tgz#606022508479b55ffa368b58fee963a03dfd7b0c"

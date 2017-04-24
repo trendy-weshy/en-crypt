@@ -9,8 +9,12 @@
     "build:watch": "tsc -p tsconfig.json -w --allowSyntheticDefaultImports --alwaysStrict --diagnostics --pretty",
     "build": "tsc -p tsconfig.json -w --allowSyntheticDefaultImports --alwaysStrict --diagnostics --pretty"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "encryption",
+    "node",
+    "crypto"
+  ],
+  "author": "John Waweru <wambugu.john.waweru@outlook.com>",
   "license": "MIT",
   "dependencies": {
     "typescript": "^2.2.2"
@@ -20,8 +24,7 @@
     "mocha": "^3.2.0",
     "ts-node": "^3.0.2",
     "tslint": "^5.1.0",
-    "tslint-eslint-rules": "^4.0.0",
-    "tw-crypt": "^0.1.0"
+    "tslint-eslint-rules": "^4.0.0"
   },
   "types": "./index.d.ts"
 }
