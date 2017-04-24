@@ -8,11 +8,12 @@
     "experimentalDecorators": false,
     "noImplicitAny": true,
     "suppressImplicitAnyIndexErrors": true,
-    "types" : ["node"],
+    "types" : ["node", "mocha"],
     "strictNullChecks": true
   },
   "exclude": [
     "node_modules/",
     ".vscode/"
-  ]
+  ],
+  "include": ["test/**/*"]
 }

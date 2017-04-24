@@ -9,6 +9,9 @@
     "build:watch": "tsc -p tsconfig.json -w --allowSyntheticDefaultImports --alwaysStrict --diagnostics --pretty",
     "build": "tsc -p tsconfig.json -w --allowSyntheticDefaultImports --alwaysStrict --diagnostics --pretty"
   },
+  "directories": {
+    "test": "test"
+  },
   "keywords": [
     "encryption",
     "node",
@@ -20,6 +23,7 @@
     "typescript": "^2.2.2"
   },
   "devDependencies": {
+    "@types/mocha": "^2.2.41",
     "@types/node": "^7.0.13",
     "mocha": "^3.2.0",
     "ts-node": "^3.0.2",
