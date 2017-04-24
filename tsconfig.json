@@ -9,5 +9,9 @@
     "noImplicitAny": true,
     "suppressImplicitAnyIndexErrors": true,
     "types" : ["node"]
-  }
+  },
+  "exclude": [
+    "node_modules/",
+    ".vscode/"
+  ]
 }
