@@ -1,34 +1,20 @@
 {
-  "name": "tw-crypt",
-  "version": "0.1.1",
-  "description": "",
+  "name": "en-crypt",
+  "version": "1.0.0",
   "main": "index.js",
-  "scripts": {
-    "test": "mocha --reporter spec --compilers ts:ts-node/register test/index.ts",
-    "lint": "tslint -c tslint.json './**/*.ts'",
-    "build:watch": "tsc -p tsconfig.json -w --allowSyntheticDefaultImports --alwaysStrict --diagnostics --pretty",
-    "build": "tsc -p tsconfig.json -w --allowSyntheticDefaultImports --alwaysStrict --diagnostics --pretty"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slowday/en-crypt.git"
   },
-  "directories": {
-    "test": "test"
-  },
-  "keywords": [
-    "encryption",
-    "node",
-    "crypto"
-  ],
   "author": "John Waweru <wambugu.john.waweru@outlook.com>",
   "license": "MIT",
-  "dependencies": {
-    "typescript": "^2.2.2"
+  "description": "[ ![Codeship Status for trendy-weshy/tw-crypt](https://app.codeship.com/projects/5e75cd50-0b00-0135-a5b3-26d8edc808d8/status?branch=master)](https://app.codeship.com/projects/214846)",
+  "bugs": {
+    "url": "https://github.com/slowday/en-crypt/issues"
   },
-  "devDependencies": {
-    "@types/mocha": "^2.2.41",
-    "@types/node": "^7.0.13",
-    "mocha": "^3.2.0",
-    "ts-node": "^3.0.2",
-    "tslint": "^5.1.0",
-    "tslint-eslint-rules": "^4.0.0"
+  "homepage": "https://github.com/slowday/en-crypt#readme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "types": "./index.d.ts"
+  "keywords": []
 }
