@@ -14,7 +14,9 @@ export default class Encrypt<T> {
         return Encrypt.inst;
     }
 
-    private constructor() {}
+    private constructor() {
+        // generate an algorithm to be used by the singleton
+    }
 
     private cipher(data: T, algorithm: string, key: string): string {
         return '';
