@@ -1,0 +1,13 @@
+sudo: false
+language: node_js
+node_js:
+  - "node"
+  - "7"
+before_script:
+  - npm install -g typescript
+install: 
+  - yarn
+cache:
+  yarn: true
+script:
+  - yarn test
