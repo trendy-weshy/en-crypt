@@ -35,31 +35,6 @@ describe('SlowdayEncrypt class module', () => {
     ];
     const emitRandomIdx = (n: number) => (Math.floor(Math.random() * (n-1)+0));
 
-    it('Should encrypt-decrypt a random list of data', (done: MochaDone) => {
-        // #note: encrypt a list of data values and counter check if the library works for each instance
-        const result: (arr: any[])=>boolean = (arr: any[]) => {
-            return arr.reduce((acc: boolean, curr: any) => {
-                const key: string = keys[emitRandomIdx(keys.length)];
-                const encrypted: {key: string; munch: string} = {
-                    key,
-                    munch: SlowdayCrypt.encrypt<any>(curr, key)
-                };
-                const decrypted: any = SlowdayCrypt.decrypt<any>(encrypted.munch, encrypted.key);
-                deepStrictEqual({ a: curr }, { a: decrypted });
-                return isEqual(curr, decrypted);
-            }, false);
-        };
-
-        try {
-            equal(result(dataList), true);
-        } catch(e) {
-            equal(e, undefined || null);
-            // tslint:disable-next-line:no-console
-            console.error(e);
-        }
-        done();
-    });
-
     it('Should accept an user-chosen algorithm as an argument', (done: MochaDone) => {
         try {
             const data: ICredentials = {
@@ -73,8 +48,6 @@ describe('SlowdayEncrypt class module', () => {
             deepStrictEqual({ a: data }, { a: decrypted });
         } catch(e) {
             equal(e, undefined || null);
-            // tslint:disable-next-line:no-console
-            console.error(e);
         }
         done();
     });
@@ -84,16 +57,31 @@ describe('SlowdayEncrypt class module', () => {
         const key: string = randomBytes(8).toString('hex');
         try {
             const encrypted: string = SlowdayCrypt.encrypt<any>(data, key);
-            const digestData = data.split('|');
+            const digestData = encrypted.split('|');
             equal(digestData.length, 3);
             const [dummyText, cipherIdx, cipher] = digestData;
             const digestCipher = cipher.split(';;');
             equal(digestCipher.length, 2);
         } catch(e) {
             equal(e, undefined || null);
-            // tslint:disable-next-line:no-console
-            console.error(e);
         }
         done();
+    });
+
+    context('Library adoption to diffrent data types', () => {
+        it('Should encrypt-decrypt a random list of data', (done: MochaDone) => {
+            try {
+                const key: string = keys[emitRandomIdx(keys.length)];
+                const result: boolean = dataList.reduce((acc: boolean, curr: any) => {
+                    const encrypted: string = SlowdayCrypt.encrypt<any>(curr, key, null);
+                    const decrypted: any = SlowdayCrypt.decrypt<any>(encrypted, key, null);
+                    deepStrictEqual({ a: curr }, { a: (typeof curr === 'number') ? parseInt(decrypted) : decrypted });
+                    return isEqual(curr, decrypted);
+                }, 0);
+            } catch(e) {
+                equal(e, undefined || null);
+            }
+            done();
+        });
     });
 });

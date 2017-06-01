@@ -6,7 +6,7 @@
     "no-namespace": true,
     "no-eval": true,
     "no-var-keyword": true,
-    "radix": true,
+    "radix": false,
     "triple-equals": true,
     "class-name": true,
     "no-angle-bracket-type-assertion": true,

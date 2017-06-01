@@ -14,7 +14,7 @@
   },
   "homepage": "https://github.com/slowday/en-crypt#readme",
   "scripts": {
-    "test": "mocha --reporter spec --compilers ts:ts-node/register test/index.ts && exit 1",
+    "test": "mocha --reporter spec --compilers ts:ts-node/register test/main.spec.ts",
     "compile": "./node_modules/.bin/tsc -p tsconfig.json --diagnostics --inlineSourceMap",
     "compile:watch": "./node_modules/.bin/tsc -p tsconfig.json --diagnostics --inlineSourceMap --watch"
   },
@@ -30,5 +30,7 @@
     "tslint-react": "^3.0.0",
     "typescript": "^2.3.4"
   },
-  "dependencies": {}
+  "dependencies": {
+    "lodash.random": "^3.2.0"
+  }
 }
