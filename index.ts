@@ -15,8 +15,19 @@ interface IAlgorithm {
 
 export class SlowdayCrypt {
 
-    public static decrypt<T>(data: string, key: number) {
-        //
+    public static decrypt<T>(data: string, key: number, algorithm: string|null=null) {
+        const digestData = data.split('|');
+        const [dummyText, cipherIdx, cipher] = digestData;
+        const digestCipher = cipher.split(';;');
+        const [encryptedData, salt] = digestCipher;
+        if (cipherIdx==='idx-n' || !algorithm) {
+            throw new Error('Sorry but you need to provide an algorithm for the decryption process to complete');
+        } else {
+            const decipher: Decipher = createDecipher((algorithm) ? algorithm : cipherList[cipherIdx], `${key}${salt}`);
+            let digest: string = decipher.update(encryptedData, 'hex', 'utf8');
+            digest += decipher.final('utf8');
+            return JSON.parse(digest);
+        }
     }
 
     public static encrypt<T>(data: T, key: string, algorithm: string|null=null): string {
