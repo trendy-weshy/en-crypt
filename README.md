@@ -1,6 +1,8 @@
 # en-crypt #
 simple encryption-decryption library.
 
+[![Build Status](https://travis-ci.org/slowday/en-crypt.svg?branch=master)](https://travis-ci.org/slowday/en-crypt)
+
 ## How to install ##
 For those who are interested in contributing to the project
 
@@ -12,7 +14,7 @@ For those who are interested in contributing to the project
 ## Usage ##
 
 ### Installation ###
-The package name is **@slowday/encrypt** just run `npm install @slowday/encrypt` or `yarn add @slowday/encrypt`
+The package name is **@slowday/en-crypt** just run `npm install @slowday/en-crypt` or `yarn add @slowday/en-crypt`
 
 ## LICENSE ##
 MIT
