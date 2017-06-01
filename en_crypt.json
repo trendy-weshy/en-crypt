@@ -1,0 +1,27 @@
+{
+    "ciphers": [
+        "aes-128-xts", 
+        "aes256", 
+        "rc2-cbc", 
+        "aes-128-ctr", 
+        "aes-256-xts",
+        "camellia-256-cfb1", 
+        "rc2-40-cbc", 
+        "aes-256-cfb8", 
+        "aes-256-cbc",
+        "aes-192-cfb8", 
+        "cast5-cfb",
+        "camellia-256-cfb8", 
+        "aes-256-ecb", 
+        "camellia256",
+        "camellia-128-cfb8", 
+        "aes-128-cfb", 
+        "camellia-192-cfb", 
+        "camellia-192-cbc", 
+        "aes-256-cfb1",
+        "rc4-40", 
+        "camellia-128-ofb", 
+        "rc4",
+        "aes-128-cbc-hmac-sha256"
+    ]
+}

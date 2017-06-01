@@ -16,5 +16,12 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": []
+  "keywords": [],
+  "devDependencies": {
+    "@types/lodash": "^4.14.64",
+    "@types/node": "^7.0.22"
+  },
+  "dependencies": {
+    "lodash": "^4.17.4"
+  }
 }
