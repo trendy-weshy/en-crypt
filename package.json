@@ -14,13 +14,16 @@
   },
   "homepage": "https://github.com/slowday/en-crypt#readme",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",    
+    "test": "echo \"Error: no test specified\" && exit 1",
     "compile": "./node_modules/.bin/tsc -p tsconfig.json --diagnostics --inlineSourceMap",
     "compile:watch": "./node_modules/.bin/tsc -p tsconfig.json --diagnostics --inlineSourceMap --watch"
   },
   "keywords": [],
   "devDependencies": {
+    "@types/mocha": "^2.2.41",
     "@types/node": "^7.0.22",
+    "mocha": "^3.4.2",
+    "ts-node": "^3.0.4",
     "tslint": "^5.4.0",
     "tslint-react": "^3.0.0",
     "typescript": "^2.3.4"
