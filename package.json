@@ -23,7 +23,6 @@
     "@types/lodash": "^4.14.64",
     "@types/mocha": "^2.2.41",
     "@types/node": "^7.0.22",
-    "lodash.isequal": "^4.5.0",
     "mocha": "^3.4.2",
     "ts-node": "^3.0.4",
     "tslint": "^5.4.0",
@@ -31,6 +30,7 @@
     "typescript": "^2.3.4"
   },
   "dependencies": {
+    "lodash.isequal": "^4.5.0",
     "lodash.random": "^3.2.0"
   }
 }
