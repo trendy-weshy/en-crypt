@@ -1,27 +1,29 @@
 {
   "name": "en-crypt",
-  "version": "1.0.0",
+  "version": "0.2.0",
   "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/slowday/en-crypt.git"
   },
-  "author": "John Waweru <wambugu.john.waweru@outlook.com>",
+  "author": "John Waweru",
   "license": "MIT",
-  "description": "[ ![Codeship Status for trendy-weshy/tw-crypt](https://app.codeship.com/projects/5e75cd50-0b00-0135-a5b3-26d8edc808d8/status?branch=master)](https://app.codeship.com/projects/214846)",
+  "description": "simple encryption-decryption library",
   "bugs": {
     "url": "https://github.com/slowday/en-crypt/issues"
   },
   "homepage": "https://github.com/slowday/en-crypt#readme",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",    
+    "compile": "./node_modules/.bin/tsc -p tsconfig.json --diagnostics --inlineSourceMap",
+    "compile:watch": "./node_modules/.bin/tsc -p tsconfig.json --diagnostics --inlineSourceMap --watch"
   },
   "keywords": [],
   "devDependencies": {
-    "@types/lodash": "^4.14.64",
-    "@types/node": "^7.0.22"
+    "@types/node": "^7.0.22",
+    "tslint": "^5.4.0",
+    "tslint-react": "^3.0.0",
+    "typescript": "^2.3.4"
   },
-  "dependencies": {
-    "lodash": "^4.17.4"
-  }
+  "dependencies": {}
 }

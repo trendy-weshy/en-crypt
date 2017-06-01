@@ -1,0 +1,28 @@
+{
+	"version": "2.1.6",
+	"compilerOptions": {
+		"allowJs": false,
+		"target": "es5",
+		"module": "commonjs",
+		"noImplicitAny": true,
+		"noEmitOnError": true,
+		"suppressImplicitAnyIndexErrors": true,
+		"removeComments": true,
+        "preserveConstEnums": true,
+        "alwaysStrict": true,
+        "pretty": false,
+        "typeRoots": ["./node_modules/@types"],
+        "moduleResolution": "node",
+        "allowSyntheticDefaultImports": true,
+        "types": ["node"],
+		"declaration": true
+	},
+	"exclude": [
+		"node_modules",
+		"**/*.spec.ts",
+		"test/**/*"
+	],
+	"files": [
+		"index.ts"
+	]
+}

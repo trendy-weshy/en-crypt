@@ -1,0 +1,6 @@
+**/**/*.ts
+test
+nodemon.json
+tslint.json
+tsconfig.json
+yarn.lock

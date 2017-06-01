@@ -1,5 +1,4 @@
 # en-crypt #
-
 simple encryption-decryption library.
 
 ## How to install ##

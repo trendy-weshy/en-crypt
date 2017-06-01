@@ -1,0 +1,27 @@
+{
+  "extends": ["tslint:latest", "tslint-react"],
+  "rules": {
+    "quotemark": [true, "single", "avoid-escape", "jsx-double"],
+    "no-empty-interface": false,
+    "no-namespace": true,
+    "no-eval": true,
+    "no-var-keyword": true,
+    "radix": true,
+    "triple-equals": true,
+    "class-name": true,
+    "no-angle-bracket-type-assertion": true,
+    "semicolon": [true, "always"],
+    "no-default-export": false,
+    "switch-default": false,
+    "no-construct": true,
+    "trailing-comma": [false],
+    "whitespace": [false],
+    "member-ordering": [false],
+    "no-unused-expression": true,
+    "jsx-no-multiline-js": false,
+    "jsx-no-lambda": false,
+    "max-classes-per-file": [2],
+    "no-object-literal-type-assertion": false,
+    "ordered-imports": [false]
+  }
+}
