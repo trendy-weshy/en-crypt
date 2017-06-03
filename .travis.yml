@@ -6,6 +6,7 @@ before_script:
   - npm install -g typescript
 install: 
   - yarn
+  - yarn run compile
 cache:
   yarn: true
 script:

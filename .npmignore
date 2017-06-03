@@ -1,4 +1,5 @@
 **/**/*.ts
+!**/**/*.d.ts
 test
 nodemon.json
 tslint.json

@@ -17,6 +17,9 @@ interface IAlgorithm {
 export class SlowdayCrypt {
 
     public static decrypt<T>(data: string, key: string, algorithm: string|null=null): T {
+        if (!data) {
+            return null;
+        }
         const digestData = data.split('|');
         const [dummyText, cipherIdx, cipher] = digestData;
         const digestCipher = cipher.split(';;');
@@ -36,6 +39,9 @@ export class SlowdayCrypt {
 
     public static encrypt<T>(data: T | number | string, key: string, algorithm: string|null=null): string {
         try {
+            if (!data) {
+                return null;
+            }
             if (typeof data==='number') {
                 data=data.toString();
             }
