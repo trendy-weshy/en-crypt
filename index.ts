@@ -15,23 +15,17 @@ const cipherList = require('./en-crypt.json');
  * @param algorithm
  * @return string | undefined
  *
- * function is overloaded for capturing the various implementation of the encryption
- * algorithm and their data needs e.g. I had to convert the number to be a string.
- * first function is generic but extends string properties due to the factor most of
- * of the anticipated datatype for encryption will be string so its properties are important
- * for better computation and data manipulation.
+ * function is overloaded for capturing the various implementation of the encryption data needs.
  * This also enables self code-documentation and better definition files .d.ts.
  */
-export function encrypt<T>(data: T, key: string, algorithm?: string|undefined): string;
-export function encrypt(data: undefined, key?: string): undefined;
-export function encrypt(data: number, key: string, algorithm?: string|undefined): string {
+export function encrypt<T>(data: T|number|undefined, key: string, algorithm?: string|undefined): string|undefined {
     try {
         if (!data) {
             return undefined;
         }
         const salt: string = randomBytes(4).toString('hex');
         const dummyText: string = randomBytes(3).toString('hex');
-        const idx: number|null=Math.floor(random(cipherList.ciphers.length-2));
+        const idx: number = Math.floor(random(cipherList.ciphers.length-2));
         const internalAlg: string = cipherList.ciphers[idx];
         // get a JSON string for easy data consistency
         const dataString: string = JSON.stringify( (typeof data === 'number') ? data.toString() : data );
@@ -44,6 +38,14 @@ export function encrypt(data: number, key: string, algorithm?: string|undefined)
     }
 }
 
+/**
+ * @param data
+ * @param key
+ * @param algorithm
+ * @return generictype<T>
+ *
+ * decrypt and return a desired output per the generic definition
+ */
 export function decrypt<T>(data: string, key: string, algorithm: string|null=null): T {
     if (!data) {
         return null;
