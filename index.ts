@@ -22,7 +22,7 @@ const cipherList = require('./en-crypt.json');
  * for better computation and data manipulation.
  * This also enables self code-documentation and better definition files .d.ts.
  */
-export function encrypt<T extends string>(data: T, key: string, algorithm?: string|undefined): string;
+export function encrypt<T>(data: T, key: string, algorithm?: string|undefined): string;
 export function encrypt(data: undefined, key?: string): undefined;
 export function encrypt(data: number, key: string, algorithm?: string|undefined): string {
     try {
