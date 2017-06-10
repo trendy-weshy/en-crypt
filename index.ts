@@ -18,7 +18,9 @@ const cipherList = require('./en-crypt.json');
  * function is overloaded for capturing the various implementation of the encryption data needs.
  * This also enables self code-documentation and better definition files .d.ts.
  */
-export function encrypt<T>(data: T|number|undefined, key: string, algorithm?: string|undefined): string|undefined {
+export function encrypt(data: number, key: string, algorithm?: string): string;
+export function encrypt<T>(data: T, key: string, algorithm?: string): string;
+export function encrypt<T>(data: T|number, key: string, algorithm: string|undefined): string|undefined {
     try {
         if (!data) {
             return undefined;
