@@ -4,12 +4,12 @@
  */
 
 import {randomBytes} from 'crypto';
-import {SlowdayCrypt} from '../index';
+import {encrypt, decrypt} from '../index';
 // tslint:disable-next-line:no-var-requires
 const isEqual = require('lodash.isequal');
 import {deepStrictEqual, equal, notEqual} from 'assert';
 
-describe('SlowdayEncrypt class module', () => {
+describe('@slowday/en-crypt testing suite', () => {
     interface ICredentials {
         hashPassword: string;
         authToken: string;
@@ -43,8 +43,8 @@ describe('SlowdayEncrypt class module', () => {
             };
             const key: string = randomBytes(8).toString('hex');
             const algorithm: string = `aes-256-ctr`;
-            const encrypted: string = SlowdayCrypt.encrypt<any>(data, key, algorithm);
-            const decrypted: any = SlowdayCrypt.decrypt<any>(encrypted, key, algorithm);
+            const encrypted: string = encrypt<ICredentials>(data, key, algorithm);
+            const decrypted: any = decrypt<ICredentials>(encrypted, key, algorithm);
             deepStrictEqual({ a: data }, { a: decrypted });
         } catch(e) {
             equal(e, undefined || null);
@@ -56,7 +56,7 @@ describe('SlowdayEncrypt class module', () => {
         const data: string = 'ineedmoremoney_up_in_here!';
         const key: string = randomBytes(8).toString('hex');
         try {
-            const encrypted: string = SlowdayCrypt.encrypt<any>(data, key);
+            const encrypted: string = encrypt<string>(data, key);
             const digestData = encrypted.split('|');
             equal(digestData.length, 3);
             const [dummyText, cipherIdx, cipher] = digestData;
@@ -73,8 +73,8 @@ describe('SlowdayEncrypt class module', () => {
             try {
                 const key: string = keys[emitRandomIdx(keys.length)];
                 const result: boolean = dataList.reduce((acc: boolean, curr: any) => {
-                    const encrypted: string = SlowdayCrypt.encrypt<any>(curr, key, null);
-                    const decrypted: any = SlowdayCrypt.decrypt<any>(encrypted, key, null);
+                    const encrypted: string = encrypt<any>(curr, key, null);
+                    const decrypted: any = decrypt<any>(encrypted, key, null);
                     deepStrictEqual({ a: curr }, { a: (typeof curr === 'number') ? parseInt(decrypted) : decrypted });
                     return isEqual(curr, decrypted);
                 }, 0);
